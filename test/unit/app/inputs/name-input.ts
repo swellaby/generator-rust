@@ -2,13 +2,15 @@
 
 import chai = require('chai');
 import YeomanGenerator = require('yeoman-generator');
+import inquirer = require('inquirer');
 
 import IProjectConfig = require('../../../../generators/app/interfaces/project-config');
 import PromptType = require('../../../../generators/app/enums/prompt-type');
 import nameInput = require('../../../../generators/app/inputs/name-input');
 
 const input = nameInput;
-const prompt = input.prompt;
+// tslint:disable-next-line:no-any
+const prompt: inquirer.InputQuestion<Record<string, any>> = <inquirer.InputQuestion<Record<string, any>>>input.prompt;
 const assert = chai.assert;
 
 suite('NameInput Tests:', () => {
