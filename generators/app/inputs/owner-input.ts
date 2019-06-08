@@ -27,7 +27,7 @@ const prompt: YeomanGenerator.Question = {
     type: PromptType.input,
     name: name,
     message: 'Who is the owner/author of this app?',
-    validate: validatePromptInput
+    validate: validatePromptInput,
 };
 
 const option: YeomanGenerator.OptionConfig = {
