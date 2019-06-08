@@ -8,6 +8,7 @@ import PromptType = require('../../../../generators/app/enums/prompt-type');
 import ownerInput = require('../../../../generators/app/inputs/owner-input');
 
 const input = ownerInput;
+// tslint:disable-next-line:no-any
 const prompt: inquirer.InputQuestion<Record<string, any>> = <inquirer.InputQuestion<Record<string, any>>>input.prompt;
 const assert = chai.assert;
 
