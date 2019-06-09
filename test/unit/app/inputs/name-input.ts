@@ -9,8 +9,7 @@ import PromptType = require('../../../../generators/app/enums/prompt-type');
 import nameInput = require('../../../../generators/app/inputs/name-input');
 
 const input = nameInput;
-// tslint:disable-next-line:no-any
-const prompt: inquirer.InputQuestion<Record<string, any>> = <inquirer.InputQuestion<Record<string, any>>>input.prompt;
+const prompt = <inquirer.InputQuestion<Record<string, unknown>>>input.prompt;
 const assert = chai.assert;
 
 suite('NameInput Tests:', () => {
