@@ -62,7 +62,9 @@
     "coverage:integration:enforce": "nyc --report-dir .coverage/integration npm run test:integration",
     "coverage:integration:open": "npm run coverage:integration && opn .coverage/integration/index.html",
     "dev:reset": "npm run clean && node -e \"require('rimraf').sync('node_modules');\" && npm run dev:setup",
-    "dev:setup": "npm i && npm i -g yo && npm run build"
+    "dev:setup": "npm i && npm i -g yo && npm run build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "@swellaby/eslint-config": "^2.0.0",
@@ -98,6 +100,8 @@
     "mkdirp": "^0.5.1",
     "tslib": "^1.9.3",
     "yeoman-generator": "^4.0.1",
-    "yosay": "^2.0.2"
-  }
+    "yosay": "^2.0.2",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
