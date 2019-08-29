@@ -1,6 +1,6 @@
 'use strict';
 
-import inquirer = require('inquirer');
+// import inquirer = require('inquirer');
 import yeoman = require('yeoman-generator');
 import IProjectConfig = require('./project-config');
 
@@ -11,7 +11,7 @@ interface IProjectInput {
     name: string;
     optionName: string;
     option?: yeoman.OptionConfig;
-    prompt: inquirer.Question;
+    prompt: yeoman.Question;
     /**
      * Attempts to apply the specified value to corresponding setting.
      * @param {any} value - The value provided..
